@@ -1,0 +1,22 @@
+#define _GLIBCXX_DEBUG
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+#define REP(i, s, n) for (int i = (s); i < (int)(n); i++)
+#define ALL(v) v.begin(), v.end()
+#define CONTAINS(v, x) (find(v.begin(), v.end(), x) != v.end())
+#define CHECK(a) cout << #a << " " << a << endl;
+const int INF = 1e9;
+const ll MOD = (ll)1e9 + 7LL;
+
+void Main () {
+    
+    
+}
+
+int main () {
+    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cout << fixed << setprecision(20);
+    Main();
+}
