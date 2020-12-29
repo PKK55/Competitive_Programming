@@ -4,10 +4,11 @@ using namespace std;
 using ll = long long;
 #define REP(i, s, n) for (int i = (s); i < (int)(n); i++)
 #define ALL(v) v.begin(), v.end()
-#define CONTAINS(v, x) (find(v.begin(), v.end(), x) != v.end())
 #define CHECK(a) cout << #a << " " << a << endl;
 const int INF = 1e9;
 const ll MOD = (ll)1e9 + 7LL;
+const vector<int> dx = {1, 0, -1, 0, 1, 1, -1, -1};
+const vector<int> dy = {0, 1, 0, -1, 1, -1, 1, -1};
 
 void Main () {
     
