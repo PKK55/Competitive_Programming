@@ -1,0 +1,12 @@
+#define ALL(v) v.begin(), v.end()
+
+vector<> vec();
+
+// 通常(昇順)のソート
+sort(ALL(vec));
+
+// 降順ソート APG4b 3.06 ラムダ式
+sort(ALL(vec), [](auto a, auto b) {return a > b;});
+
+sort(ALL(vec));
+reverse(ALL(vec));
