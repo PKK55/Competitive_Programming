@@ -1,0 +1,20 @@
+// 与えらえた10進数（Number）を（Radix）進数に変換する
+string positional_notation (int Number, int Radix) {
+    string Result = "";
+    while (Number) {
+        Result += to_string(Number % Radix);
+        Number /= Radix;
+    }
+    reverse(ALL(Result));
+    return Result;
+}
+
+// 与えられた10進数の各ケタの和を求める
+int digit_sum (int Number) {
+    int Result = 0;
+    while (Number) {
+        Result += Number % 10;
+        Number /= 10;
+    }
+    return Result;
+}
