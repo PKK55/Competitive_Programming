@@ -1,0 +1,6 @@
+// https://qiita.com/e869120/items/518297c6816adb67f9a5#3-8-%E6%99%82%E9%96%93%E8%A8%88%E6%B8%AC-clock を参照
+
+int TIME = clock();
+int ETIME = 1.0*(clock()-TIME)/CLOCKS_PER_SEC; 
+CHECK(ETIME);
+assert(ETIME>1.99);　//　実行時間が長いとRE
