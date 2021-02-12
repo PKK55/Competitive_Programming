@@ -14,3 +14,26 @@ int Tribonacci (int N) {
 
     return Tribonacci(N - 1) + Tribonacci(N - 2) + Tribonacci(N - 3);
 }
+
+//フィボナッチ数列　メモ化
+vector<ll> Memo_fibonacci(100, -1);
+ll Fibonacci (int N, vector<ll> &Memo_fibonacci) {
+    if (N == 0) return 0;
+    else if (N == 1) return 1;
+      
+    if (Memo_fibonacci[N] != -1) return Memo_fibonacci[N];
+    
+    return Memo_fibonacci[N] = Fibonacci(N - 1) + Fibonacci(N - 2);
+}
+
+//トリボナッチ数列　メモ化
+vector<ll> Memo_tribonacci(100, -1);
+ll Tribonacci (int N, vector<ll> &Memo_tribonacci) {
+    if (N == 0) return 0;
+    else if (N == 1) return 0;
+    else if (N == 2) return 1;
+      
+    if (Memo_tribonacci[N] != -1) return Memo_tribonacci[N];
+    
+    return Memo_tribonacci[N] = Tribonacci(N - 1) + Tribonacci(N - 2) + Tribonacci(N - 3);
+}
