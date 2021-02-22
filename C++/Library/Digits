@@ -18,3 +18,9 @@ int digit_sum (int Number) {
     }
     return Result;
 }
+
+// 与えられた10進数の数字の桁数をかえす
+int digit_size (int Number) {
+    string number = to_string(Number);
+    return number.size();
+}
