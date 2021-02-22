@@ -9,3 +9,14 @@ vector<ll> Divisor (ll n) {
     }
     return ret;
 }
+
+// 約数をpairでかえす　（かけて元の数になる数同士でpair）
+vector<pair<ll, ll>> Divisor_pair (ll n) {
+    vector<pair<ll, ll>> ret;
+    for(ll i = 1; i * i <= n; i++){
+        if (n % i == 0) {
+            ret.push_back(make_pair(i, n/i));
+        }
+    }
+    return ret;
+}
