@@ -12,8 +12,8 @@ const ll MOD = (ll)1e9 + 7LL;
 const vector<int> dx = {0, 1, 0, -1, 0, 1, -1, 1, -1};
 const vector<int> dy = {0, 0, 1, 0, -1, 1, 1, -1, -1};
 //未確認↓
-template<class T> bool chmin(T& a, T b){ if (a > b){ a = b; return true; } return false; }
-template<class T> bool chmax(T& a, T b){ if (a < b){ a = b; return true; } return false; }
+template<class T> bool CHMIN(T& a, T b){ if (a > b){ a = b; return true; } return false; }
+template<class T> bool CHMAX(T& a, T b){ if (a < b){ a = b; return true; } return false; }
 
 void Main () {
     
