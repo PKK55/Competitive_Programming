@@ -12,13 +12,14 @@ sort(ALL(vec));
 reverse(ALL(vec));
 
 //pair 二番目の値でソート　比較関数
+  pairの要素の型を必要に応じて変更
 //昇順
-bool comp (pair<int, int> a, b) {
+bool comp (pair<int, int> a, pair<int, int> b) {
     if (a.second != b.second) return a.second < b.second;
     else a.first < b.first;
 }
 //降順
-bool comp (pair<int, int> a, b) {
+bool comp (pair<int, int> a, pair<int, int> b) {
     if (a.second != b.second) return a.second > b.second;
     else a.first > b.first;
 }
