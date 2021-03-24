@@ -8,6 +8,9 @@ sort(ALL(vec));
 // 降順ソート APG4b 3.06 ラムダ式
 sort(ALL(vec), [](auto a, auto b) {return a > b;});
 
+//降順ソート　<>の中を必要に応じて変更
+sort(ALL(vec), greater<int>{});
+
 sort(ALL(vec));
 reverse(ALL(vec));
 
