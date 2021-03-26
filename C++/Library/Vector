@@ -1,20 +1,23 @@
-//最大値, 最小値
-*max_element(v.begin(), v.end());
-*min_element(v.begin(), v.end());
+#define ALL(v) v.begin(), v.end()
+vector<> V;
 
-//総和
-accumulate(v.begin(), v.end(), 0);
-accumulate(v.begin(), v.end(), 0LL);
+//要素数を変更する
+V.resize(N);
 
-//next_permutation(vector<int> v(n))
+//最大値, 最小値 多次元配列では使えない
+*max_element(ALL(V))
+*min_element(ALL(V))
+
+//総和 int, ll　多次元配列では使えない
+accumulate(ALL(V), 0)
+accumulate(ALL(V), 0LL)
+
+//順列の全列挙　O(N!)
+sort(ALL(V));
 do{
     // vに対する処理
-}while(next_permutation(v.begin(), v.end()));
+}while(next_permutation(ALL(V)));
 
-//pair型をsecondの要素でソート
-bool compare_by_second(pair<int, int> a, pair<int, int> b){
-    return (a.second != b.second ? a.second < b.second : a.first < b.first);
-}
-
-/同じ要素を削除
-v.erase(unique(v.begin(), v.end()), v.end());
+//同じ要素を削除、ソートしない場合は隣接する重複している要素しか削除されない
+sort(ALL(V));
+V.erase(unique(ALL(V)), V.end());
