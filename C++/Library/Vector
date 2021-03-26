@@ -9,6 +9,7 @@ V.resize(N);
 *min_element(ALL(V))
 
 //総和 int, ll　多次元配列では使えない
+// 0の部分が初期値になり、型もそこで決定される、1などにする場合は総和＋1が出力される
 accumulate(ALL(V), 0)
 accumulate(ALL(V), 0LL)
 
