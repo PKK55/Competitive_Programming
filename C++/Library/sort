@@ -19,12 +19,12 @@ reverse(ALL(vec));
 //昇順
 bool comp (pair<int, int> a, pair<int, int> b) {
     if (a.second != b.second) return a.second < b.second;
-    else a.first < b.first;
+    else return a.first < b.first;
 }
 
 //降順
 bool comp (pair<int, int> a, pair<int, int> b) {
     if (a.second != b.second) return a.second > b.second;
-    else a.first > b.first;
+    else return a.first > b.first;
 }
 sort(ALL(vec), comp);
