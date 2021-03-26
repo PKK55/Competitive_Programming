@@ -1,0 +1,20 @@
+//最大値, 最小値
+*max_element(v.begin(), v.end());
+*min_element(v.begin(), v.end());
+
+//総和
+accumulate(v.begin(), v.end(), 0);
+accumulate(v.begin(), v.end(), 0LL);
+
+//next_permutation(vector<int> v(n))
+do{
+    // vに対する処理
+}while(next_permutation(v.begin(), v.end()));
+
+//pair型をsecondの要素でソート
+bool compare_by_second(pair<int, int> a, pair<int, int> b){
+    return (a.second != b.second ? a.second < b.second : a.first < b.first);
+}
+
+/同じ要素を削除
+v.erase(unique(v.begin(), v.end()), v.end());
