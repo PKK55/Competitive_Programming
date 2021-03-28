@@ -8,11 +8,11 @@ char c;
 
 //大文字かどうか、大文字に変換
 isupper(c)
-(char)toupper(c)
+c = (char)toupper(c);
 
 //小文字かどうか、小文字に変換
 islower(c)
-(char)tolower(c)
+c = (char)tolower(c);
 
 //アルファベットかどうか
 isalpha(c)
@@ -25,10 +25,9 @@ c - '0'
 
 //大文字のアルファベットをN個後にずらす （Zの次はA）
 //小文字の場合は、'A' を 'a'に直せば良い
-char ROT_N (int N, char c) {
+void ROT_N (char &c, int N) {
   c -= 'A';
   c += N;
   c %= 26;
   c += 'A';
-  return c;
 }
