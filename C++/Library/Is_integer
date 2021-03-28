@@ -1,4 +1,0 @@
-// double の値が整数だったら true を返す
-bool IS_INTEGER (double X) {
-  return floor(X) == ceil(X);
-}

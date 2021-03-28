@@ -1,0 +1,34 @@
+// double の値が整数だったら true を返す
+bool IS_INTEGER (double X) {
+  return floor(X) == ceil(X);
+}
+
+//char の判定
+char c;
+
+//大文字かどうか、大文字に変換
+isupper(c)
+(char)toupper(c)
+
+//小文字かどうか、小文字に変換
+islower(c)
+(char)tolower(c)
+
+//アルファベットかどうか
+isalpha(c)
+
+//10進数の数字かどうか
+isdigit(c)
+
+//charが数字の時、intに変換
+c - '0'
+
+//大文字のアルファベットをN個後にずらす （Zの次はA）
+//小文字の場合は、'A' を 'a'に直せば良い
+char ROT_N (int N, char c) {
+  c -= 'A';
+  c += N;
+  c %= 26;
+  c += 'A';
+  return c;
+}
