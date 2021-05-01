@@ -28,3 +28,20 @@ bool comp (pair<int, int> a, pair<int, int> b) {
     else return a.first > b.first;
 }
 sort(ALL(vec), comp);
+
+//二次元配列のソート　比較関数
+  vectorの要素の型を必要に応じて変更
+  else return の部分が正しいかまだ検証できていない
+  
+//昇順
+bool comp (vector<int> A, vector<int> B) {
+    if (A[0] != B[0]) return A < B;
+    else return A > B;
+}
+
+//降順
+bool comp (vector<int> A, vector<int> B) {
+    if (A[0] != B[0]) return A > B;
+    else return A < B;
+}
+sort(ALL(vec), comp);
