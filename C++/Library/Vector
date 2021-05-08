@@ -4,9 +4,16 @@ vector<> V;
 //要素数を変更する
 V.resize(N);
 
+//配列を出力
+//型をその時ごとに変える、空白を出力するならそれもつけ足す
+void VECOUT1 (vector<int> &V) {
+    for (auto v : V) cout << v;
+    cout << endl;
+}
+
 //二次元配列を出力
-//型をその時ごとに変える、空白を出力するならそれもつき足す
-void VECOUT (vector<vector<char>> &VV) {
+//型をその時ごとに変える、空白を出力するならそれもつけ足す
+void VECOUT2 (vector<vector<int>> &VV) {
     for (auto V : VV) {
         for (auto v : V) cout << v;
         cout << endl;
