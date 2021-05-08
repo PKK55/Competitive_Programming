@@ -4,6 +4,15 @@ vector<> V;
 //要素数を変更する
 V.resize(N);
 
+//二次元配列を出力
+//型をその時ごとに変える、空白を出力するならそれもつき足す
+void VECOUT (vector<vector<char>> &VV) {
+    for (auto V : VV) {
+        for (auto v : V) cout << v;
+        cout << endl;
+    }
+}
+
 //最大値, 最小値 多次元配列では使えない
 *max_element(ALL(V))
 *min_element(ALL(V))
