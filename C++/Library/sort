@@ -34,13 +34,13 @@ sort(ALL(vec), comp);
   else return の部分が正しいかまだ検証できていない
   
 //昇順
-bool comp (vector<int> A, vector<int> B) {
+bool comp (vector<int> &A, vector<int> &B) {
     if (A[0] != B[0]) return A < B;
     else return A > B;
 }
 
 //降順
-bool comp (vector<int> A, vector<int> B) {
+bool comp (vector<int> &A, vector<int> &B) {
     if (A[0] != B[0]) return A > B;
     else return A < B;
 }
