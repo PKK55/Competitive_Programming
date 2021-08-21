@@ -20,3 +20,49 @@ vector<pair<ll, ll>> Divisor_pair (ll n) {
     }
     return ret;
 }
+
+/*SPF を利用したアルゴリズム 前処理O(nloglogn)、クエリ O(logn) 
+1.前処理
+    1.1 エラトステネスの篩と同様のアルゴリズムで SPF を各数について求める
+2.クエリ（n の素因数分解を求める）
+    2.1 以下を n が 1 になるまで繰り返す
+        2.1.1 n の SPF を 素因数の一つとして保存しておく
+        2.1.2 n を SPF で割った商を新たな n とする
+    2.2 保存しておいた素因数が、素因数分解になっている
+※SPF(Smallest Prime Factor)：各数に対する最小の素因数 のこと
+
+ex. 48 の素因数分解
+1. 48 のSPFは 2
+2. 48/2 = 24 のSPFは 2
+3. 24/2 = 12 のSPFは 2
+4. 12/2 = 6 のSPFは 2
+5. 6/2 = 3 のSPFは 3
+6. 以上より、48=2*2*2*2*3    */
+
+//前処理
+template <typename T>
+vector<T> smallest_prime_factor(T n) {
+    vector<T> spf(n + 1);
+    for (T i = 0; i <= n; i++) spf[i] = i;
+    for (T i = 2; i * i <= n; i++) {
+        if (spf[i] == i) {
+            for (T j = i * i; j <= n; j += i) {
+                if (spf[j] == j) spf[j] = i;
+            }
+        }
+    }
+    return spf;
+}
+
+// 使用例　auto spf = smallest_prime_factor<int>(100000);
+
+//クエリ
+template <typename T>
+map<T, T> factolization(T x, vector<T> &spf) {
+    map<T, T> mp;
+    while (x != 1) {
+        mp[spf[x]]++;
+        x /= spf[x];
+    }
+    return mp;
+}
