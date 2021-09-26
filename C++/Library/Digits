@@ -9,6 +9,17 @@ string positional_notation (int Number, int Radix) {
     return Result;
 }
 
+// Radix 進法表記の N を、10 進法表記で表す関数
+ll reverse_positional_notation (string N, ll Radix) { 
+    ll ans=0;
+    for(char x:N){
+        ans *= Radix;
+        ans += x - '0';
+    }
+    return ans;
+}
+
+
 // 与えられた10進数の各ケタの和を求める
 int digit_sum (int Number) {
     int Result = 0;
