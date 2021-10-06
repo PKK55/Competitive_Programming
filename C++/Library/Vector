@@ -38,3 +38,8 @@ do{
 //同じ要素を削除、ソートしない場合は隣接する重複している要素しか削除されない
 sort(ALL(V));
 V.erase(unique(ALL(V)), V.end());
+
+//配列内がpairの時
+for(auto [a, b] : T) {
+    // aがfirst、bがsecondで要素にアクセスできる
+}
