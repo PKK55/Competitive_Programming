@@ -1,0 +1,15 @@
+struct UnionFind {
+    vector<int> data;
+    UnionFind(int n): data(n, -1){}
+    int root(int a){ return data[a] < 0 ? a : data[a] = root(data[a]); }
+    bool issame(int a, int b) { return root(a) == root(b); }
+    bool unite(int a, int b){
+        a = root(a); b = root(b);
+        if(a == b) return 0;
+        if(data[a] > data[b]) swap(a, b);
+        data[a] += data[b];
+        data[b] = a;
+        return 1;
+    }
+    int size(int a){ return -data[root(a)]; }
+};
