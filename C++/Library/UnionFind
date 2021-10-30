@@ -12,4 +12,9 @@ struct UnionFind {
         return 1;
     }
     int size(int a){ return -data[root(a)]; }
+    int result {
+        int res = 0;
+        REP (i, 0, n) if(root(i) == i) res++;
+        return res;
+    }
 };
